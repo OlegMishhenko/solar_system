@@ -1,0 +1,13 @@
+@font-face {
+font-family: 'Space Age';
+src: url('../fonts/space.eot');
+src: url('../fonts/space.eot?#iefix') format('embedded-opentype'),
+url('../fonts/space.woff') format('woff'),
+url('../fonts/space.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@mixin normal {
+	font-family: 'Space Age', sans-serif;
+}
