@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1312 -1939.943 182.943 182.943">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_2" data-name="Group 2" transform="translate(-1700 -2056.943)">
+    <circle id="Ellipse_22" data-name="Ellipse 22" class="cls-1" cx="31.49" cy="31.49" r="31.49" transform="translate(447.981 176.981)"/>
+    <circle id="Ellipse_25" data-name="Ellipse 25" class="cls-1" cx="13.496" cy="13.496" r="13.496" transform="translate(498.965 146.991)"/>
+    <circle id="Ellipse_26" data-name="Ellipse 26" class="cls-1" cx="13.496" cy="13.496" r="13.496" transform="translate(519.959 119.999)"/>
+    <circle id="Ellipse_27" data-name="Ellipse 27" class="cls-1" cx="4.499" cy="4.499" r="4.499" transform="translate(534.954 155.988)"/>
+    <g id="Ellipse_23" data-name="Ellipse 23" class="cls-2" transform="translate(417.991 146.991)">
+      <circle class="cls-3" cx="61.481" cy="61.481" r="61.481"/>
+      <circle class="cls-4" cx="61.481" cy="61.481" r="60.981"/>
+    </g>
+    <g id="Ellipse_24" data-name="Ellipse 24" class="cls-2" transform="translate(388 117)">
+      <circle class="cls-3" cx="91.471" cy="91.471" r="91.471"/>
+      <circle class="cls-4" cx="91.471" cy="91.471" r="90.971"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+.nav
+	position: fixed
+	width: 100vw
+	padding: 0 20px 0 20px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&-logo
+		margin-top: 15px
+		width: 45px
+		height: 45px
+	&-icon
+		width: 45px
+		height: 24px
+		position: relative
+		transform: rotate(0deg)
+		transition: .5s ease-in-out
+		cursor: pointer
+		margin-left: 20px
+		& span
+			display: block
+			position: absolute
+			height: 4px
+			width: 100%
+			background: #fff
+			border-radius: 9px
+			opacity: 1
+			left: 0
+			transform: rotate(0deg)
+			transition: .25s ease-in-out
+			&:nth-child(1)
+				top: 0px
+			&:nth-child(2)
+				top: 10px
+			&:nth-child(3)
+				top: 20px
+		&.open span:nth-child(1)
+			top: 10px
+			transform: rotate(135deg)
+		&.open span:nth-child(2)
+			opacity: 0
+			left: -45px
+		&.open span:nth-child(3)
+			top: 10px
+			transform: rotate(-135deg)
+.menu
+	display: flex
+	align-items: center
+	margin-top: 10px
+	&-items
+		display: flex
+		overflow: hidden
+		&-item
+			font-size: 13px
+			text-shadow: 0 0 6px rgba(#000000, 0.5)
+			margin-left: 20px
+			transform: translate(500px,0)
+			transition: 0.4s ease-in-out
+			opacity: 0
+			color: #fff
+		&.open a
+			transform: translate(0,0)
+			opacity: 1

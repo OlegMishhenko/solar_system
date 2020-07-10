@@ -1,0 +1,222 @@
+.model
+	display: flex
+	justify-content: center
+	align-items: center
+	min-height: 100vh
+	overflow: hidden
+
+.solar-system
+	transform-style: preserve-3d
+	transform: rotateX(75deg)
+	
+#sun
+	background-image: url(../img/planets_img/sun.png)
+	background-size: contain
+	width: 1em
+	height: 1em
+	background-repeat: no-repeat
+	transform-style: preserve-3d
+	transform: rotateX(-75deg)
+	cursor: pointer
+
+.planet
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+	top: 50%
+	left: 0%
+	position: absolute
+	margin-top: -0.5em
+	margin-left: -0.5em
+	border-radius: 50%
+	transform-style: preserve-3d
+	cursor: pointer
+	border: 3px solid rgba(0, 118, 255, 0)
+	&:hover
+		border: 3px solid rgba(0, 118, 255, 1)
+
+
+.pos
+	position: absolute
+	transform-style: preserve-3d
+	animation-name: invert
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+
+#mercury .planet
+	background-image: url(../img/planets_img/mer.png)
+	background-size: contain
+	width: 1em
+	height: 1em
+	background-repeat: no-repeat
+
+#venus .planet
+	background-image: url(../img/planets_img/vena.png)
+	background-size: contain
+	width: 1em
+	height: 1em
+	background-repeat: no-repeat
+
+#earth .planet
+	background-image: url(../img/planets_img/earth.png)
+	background-size: contain
+	width: 1em
+	height: 1em
+	background-repeat: no-repeat
+	
+.orbit
+	position: absolute
+	top: 50%
+	left: 50%
+	border: 1px solid rgba(0, 118, 255, 0.5)
+	box-shadow: 0 0 10px rgba(#0076FF, 0.5), inset 0 0 10px rgba(#0076FF, 0.5)
+	border-radius: 50%
+	transform-style: preserve-3d
+	animation-name: orbit
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+
+//Анимация
+
+@keyframes orbit
+	0%
+		transform: rotateZ(0deg)
+	100%
+		transform: rotateZ(-360deg)
+		
+@keyframes invert
+	0%
+		transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg)
+	100%
+		transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg)
+
+//величина орбит
+
+#mercury.orbit
+	width: 12em
+	height: 12em
+	margin-top: -6em
+	margin-left: -6em
+
+#venus.orbit
+	width: 10em
+	height: 10em
+	margin-top: -5em
+	margin-left: -5em
+
+#earth.orbit
+	width: 14em
+	height: 14em
+	margin-top: -7em
+	margin-left: -7em
+
+//Начальное положение планет
+
+#mercury .pos
+	left: 50%
+	top: -1px
+	border: solid 3px red
+
+#venus .pos
+	left: 50%
+	top: -1px
+	border: solid 3px red
+
+#earth .pos
+	left: 50%
+	top: -1px
+	border: solid 3px red
+
+//Время анимации планет
+
+#mercury.orbit, #mercury .pos
+	animation-duration: 5s
+
+#venus.orbit, #venus .pos
+	animation-duration: 16s
+
+#earth.orbit, #earth .pos
+	animation-duration: 22s
+
+//Размеры планет
+
+#sun
+	font-size: 24em
+	
+#mercury
+	font-size: 2.5em
+
+#venus
+	font-size: 4.5em
+
+#earth
+	font-size: 4.5em
+
+//Тень планеты
+#mercury .planet
+	animation-name: shadow-mercury
+	animation-duration: 5s
+
+@keyframes shadow-mercury
+	0%
+		box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.85) //top
+	25%
+		box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.85) //left
+	50%
+		box-shadow: inset 40px -20px 16px rgba(0, 0, 0, 0.85) //bottom
+	50.01%
+		box-shadow: inset -40px -20px 16px rgba(0, 0, 0, 0.85) //bottom
+	75%
+		box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.85) //right
+	100%
+		box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.85) //top
+
+#venus .planet
+	animation-name: shadow-venus
+	animation-duration: 16s
+
+@keyframes shadow-venus
+	0%
+		box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.85) //top
+	25%
+		box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.85) //left
+	50%
+		box-shadow: inset 75px -20px 16px rgba(0, 0, 0, 0.85) //bottom
+	50.01%
+		box-shadow: inset -75px -20px 16px rgba(0, 0, 0, 0.85) //bottom
+	75%
+		box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.85) //right
+	100%
+		box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.85) //top
+
+#earth .planet
+	animation-name: shadow-earth
+	animation-duration: 22s
+
+@keyframes shadow-earth
+	0%
+		box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.85) //top
+	25%
+		box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.85) //left
+	50%
+		box-shadow: inset 75px -20px 16px rgba(0, 0, 0, 0.85) //bottom
+	50.01%
+		box-shadow: inset -75px -20px 16px rgba(0, 0, 0, 0.85) //bottom
+	75%
+		box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.85) //right
+	100%
+		box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.85) //top
+
+//z-index
+
+#sun
+	z-index: 4
+	
+#mercury
+	z-index: 3
+
+#venus
+	z-index: 2
+
+#earth
+	z-index: 1
+
